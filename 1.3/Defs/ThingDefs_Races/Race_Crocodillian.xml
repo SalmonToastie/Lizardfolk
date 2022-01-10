@@ -150,6 +150,25 @@
 					<customHeadDrawSize>(1.1, 1.1)</customHeadDrawSize>
 				</alienPartGenerator>
 			</generalSettings>
+		
+<styleSettings>
+<li>
+<key>HairDef</key>
+<value>
+<hasStyle>false</hasStyle>
+</value>
+</li>
+<li>
+<key>BeardDef</key>
+<value>
+<hasStyle>true</hasStyle>
+<styleTags>
+    <li>NoBeard</li>
+</styleTags>
+</value>
+</li>
+</styleSettings>
+
 			<graphicPaths>
 				<li>
 					<head>Pawn/Croco/</head>
@@ -188,11 +207,6 @@
 					<li>ButcheredHumanlikeCorpseOpinion</li>
 				</cannotReceiveThoughts>
 			</thoughtSettings>
-			<hairSettings>
-				<hasHair>false</hasHair>
-				<getsGreyAt>65</getsGreyAt> 
-				<hairTags />
-			</hairSettings>
 			<relationSettings>
 				<relationChanceModifierChild>1</relationChanceModifierChild>
 				<relationChanceModifierExLover>1</relationChanceModifierExLover>
@@ -282,7 +296,8 @@
 			<makesFootprints>true</makesFootprints>
 			<lifeExpectancy>70</lifeExpectancy>
 			<leatherDef>Leather_Croco</leatherDef>
-      		        <nameCategory>HumanStandard</nameCategory>
+      		        <nameGenerator>NamerLizardfolkMale</nameGenerator>
+      			<nameGeneratorFemale>NamerLizardfolkFemale</nameGeneratorFemale>
 			<body>Human</body>
 			<baseBodySize>1.25</baseBodySize>
 			<baseHealthScale>1.25</baseHealthScale>

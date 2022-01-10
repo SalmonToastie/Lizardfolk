@@ -2,13 +2,13 @@
 <Defs>
 
 	<AlienRace.RaceSettings>
-		<defName>Croco_Settings</defName>
+		<defName>Squamata_Settings</defName>
 		<pawnKindSettings>
             <alienslavekinds>
 				<li>
 					<kindDefs>
-						<li>FR_Croco</li>
-						<li>FR_CrocoTribal</li>
+						<li>FR_Squamata</li>
+						<li>FR_SquamataTribal</li>
 					</kindDefs>
 					<chance>20.0</chance>
 				</li>
@@ -17,8 +17,8 @@
 				<li>
 				
 					<kindDefs>
-						<li>FR_Croco</li>
-						<li>FR_CrocoTribal</li>
+						<li>FR_Squamata</li>
+						<li>FR_SquamataTribal</li>
 					</kindDefs>
 					<chance>20.0</chance>
 				</li>
@@ -28,7 +28,7 @@
 					<pawnKindEntries>
 						<li>
 							<kindDefs>
-								<li>FR_Croco</li>
+								<li>FR_Squamata</li>
 							</kindDefs>
 							<chance>20.0</chance>
 						</li>
@@ -56,7 +56,7 @@
 					<pawnKindEntries>
 						<li>
 							<kindDefs>
-								<li>FR_Croco</li>
+								<li>FR_Squamata</li>
 							</kindDefs>
 							<chance>20.0</chance>
 						</li>
@@ -82,10 +82,10 @@
         </pawnKindSettings>
 	</AlienRace.RaceSettings>
 
-	<AlienRace.ThingDef_AlienRace ParentName="BasePawn" Name="Alien_Croco">
-		<defName>FR_Alien_Croco</defName>
-		<label>Crocodillian</label>
-		<description>Territorial strongly built large humanoid creatures, Crocodillians are profiecient in combat and living in swampy choked enviroments.</description>
+	<AlienRace.ThingDef_AlienRace ParentName="BasePawn" Name="Alien_Squamata">
+		<defName>FR_Alien_Squamata</defName>
+		<label>Squamata</label>
+		<description>Territorial medium sized humanoid creatures, Squamata are profiecient like their kin Crocodillians in combat and living in swampy choked enviroments.</description>
 		<alienRace>
 			<generalSettings>
 				<maleGenderProbability>0.5</maleGenderProbability>
@@ -109,7 +109,7 @@
 				<alienPartGenerator>
 					<useGenderedHeads>false</useGenderedHeads>
 					<aliencrowntypes>
-						<li>CrocoOne</li>
+						<li>SquamataTwo</li>
 					</aliencrowntypes>
 					<alienbodytypes>
 						<li>Male</li>
@@ -121,38 +121,57 @@
                             <name>skin</name>
                             <first Class="ColorGenerator_Options">
                                 <options>
-                                    <!-- Greenish Skin -->
+                                    <!-- Skin -->
                                     <li>
                                         <weight>10</weight>
-                                        <only>RGB(115, 118, 74)</only>
+                                        <only>RGB(15, 103, 53)</only>
                                     </li>
                                     <li>
                                         <weight>10</weight>
-                                        <only>RGB(108, 95, 56)</only>
+                                        <only>RGB(87, 94, 60)</only>
                                     </li>
                                     <li>
                                         <weight>10</weight>
-                                        <only>RGB(95, 157, 50)</only>
+                                        <only>RGB(74, 114, 61)</only>
                                     </li>
                                     <li>
                                         <weight>10</weight>
-                                        <only>RGB(69, 72, 29)</only>
+                                        <only>RGB104, 186, 78)</only>
                                     </li>
                                     <li>
-                                        <weight>10</weight>
-                                        <only>RGB(49, 71, 22)</only>
+                                        <weight>2</weight>
+                                        <only>RGB(137, 115, 78)</only>
                                     </li>
                                 </options>
                             </first>
                         </li>
                     </colorChannels>
-					<customDrawSize>(1.25, 1.25)</customDrawSize>
+					<customDrawSize>(1.0, 1.15)</customDrawSize>
 					<customHeadDrawSize>(1.1, 1.1)</customHeadDrawSize>
 				</alienPartGenerator>
 			</generalSettings>
+
+<styleSettings>
+<li>
+<key>HairDef</key>
+<value>
+<hasStyle>false</hasStyle>
+</value>
+</li>
+<li>
+<key>BeardDef</key>
+<value>
+<hasStyle>true</hasStyle>
+<styleTags>
+    <li>NoBeard</li>
+</styleTags>
+</value>
+</li>
+</styleSettings>
+
 			<graphicPaths>
 				<li>
-					<head>Pawn/Croco/</head>
+					<head>Pawn/Squamata/</head>
 				</li>
 			</graphicPaths>
 			<thoughtSettings>
@@ -188,11 +207,6 @@
 					<li>ButcheredHumanlikeCorpseOpinion</li>
 				</cannotReceiveThoughts>
 			</thoughtSettings>
-			<hairSettings>
-				<hasHair>false</hasHair>
-				<getsGreyAt>65</getsGreyAt> 
-				<hairTags />
-			</hairSettings>
 			<relationSettings>
 				<relationChanceModifierChild>1</relationChanceModifierChild>
 				<relationChanceModifierExLover>1</relationChanceModifierExLover>
@@ -207,14 +221,14 @@
 		<statBases>
 			<Mass>35</Mass>
 			<MarketValue>1500</MarketValue>
-			<MoveSpeed>4.5</MoveSpeed>
+			<MoveSpeed>4.8</MoveSpeed>
 			<Flammability>0.1</Flammability>
 			<ComfyTemperatureMin>5</ComfyTemperatureMin>
 			<ComfyTemperatureMax>45</ComfyTemperatureMax>
 			<LeatherAmount>20</LeatherAmount>
 			<PsychicSensitivity>1.0</PsychicSensitivity>
-			<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.40</ArmorRating_Sharp>
 			<ArmorRating_Heat>0.20</ArmorRating_Heat>
 			<WorkSpeedGlobal>1.1</WorkSpeedGlobal>
 		</statBases>
@@ -258,7 +272,7 @@
 				<capacities>
 					<li>Bite</li>
 				</capacities>
-				<power>10</power>
+				<power>9</power>
 				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
 				<chanceFactor>0.07</chanceFactor>
@@ -281,11 +295,12 @@
 			<intelligence>Humanlike</intelligence>
 			<makesFootprints>true</makesFootprints>
 			<lifeExpectancy>70</lifeExpectancy>
-			<leatherDef>Leather_Croco</leatherDef>
-      		        <nameCategory>HumanStandard</nameCategory>
+			<leatherDef>Leather_Squamata</leatherDef>
+      		        <nameGenerator>NamerLizardfolkMale</nameGenerator>
+      			<nameGeneratorFemale>NamerLizardfolkFemale</nameGeneratorFemale>
 			<body>Human</body>
-			<baseBodySize>1.25</baseBodySize>
-			<baseHealthScale>1.25</baseHealthScale>
+			<baseBodySize>1.1</baseBodySize>
+			<baseHealthScale>1.1</baseHealthScale>
 			<foodType>OmnivoreHuman</foodType>
 			<gestationPeriodDays>30</gestationPeriodDays>
 			<litterSizeCurve>
@@ -298,27 +313,27 @@
 			</litterSizeCurve>
 			<lifeStageAges>
 				<li>
-					<def>BabyCrocoStage</def>
+					<def>BabySquamataStage</def>
 					<minAge>0</minAge>
 				</li>
 				<li>
-					<def>ChildCrocoStage</def>
+					<def>ChildSquamataStage</def>
 					<minAge>3</minAge>
 				</li>
 				<li>
-					<def>TeenCrocoStage</def>
+					<def>TeenSquamataStage</def>
 					<minAge>11</minAge>
 				</li>
 				<li>
-					<def>AdultCrocoStage</def>
+					<def>AdultSquamataStage</def>
 					<minAge>18</minAge>
 				</li>
 				<li>
-					<def>ElderCrocoStage</def>
+					<def>ElderSquamataStage</def>
 					<minAge>80</minAge>
 				</li>
 				<li>
-					<def>AncestorCrocoStage</def>
+					<def>AncestorSquamataStage</def>
 					<minAge>120</minAge>
 				</li>
 			</lifeStageAges>

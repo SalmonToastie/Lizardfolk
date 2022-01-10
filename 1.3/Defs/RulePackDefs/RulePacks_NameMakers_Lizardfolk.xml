@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RulePackDef>
+    <defName>NamerLizardfolkUtility</defName>
+    <rulePack>
+      <rulesFiles>
+        <li>LizFirstMale->NameBanks/Names_First_Lizardfolk_Male</li>
+        <li>LizFirstFemale->NameBanks/Names_First_Lizardfolk_Female</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>NamerLizardfolkMale</defName>
+    <include>
+      <li>NamerLizardfolkUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=12)->[LizFirstMale]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerLizardfolkFemale</defName>
+    <include>
+      <li>NamerLizardfolkUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=12)->[LizFirstFemale]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>
